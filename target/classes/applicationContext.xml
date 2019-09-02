@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<beans xmlns="http://www.springframework.org/schema/beans"    
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:aop="http://www.springframework.org/schema/aop"   
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:jee="http://www.springframework.org/schema/jee"  
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xsi:schemaLocation="    
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd  
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">    
+        	
+	
+    
+    <!-- 自动扫描 -->
+	<context:component-scan base-package="com.zhoufudun.mail.service" />
+	<context:component-scan base-package="com.zhoufudun.mail.service.impl" />
+	
+	<!-- 任务1配置 -->  
+    <bean name="jobOne" class="com.zhoufudun.quartz.demo.JobOneDemo"/>  
+    <bean id="jobOneDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+        <!-- 执行的类 -->  
+        <property name="targetObject">  
+            <ref bean="jobOne" />  
+        </property>  
+        <!-- 类中的方法 -->  
+        <property name="targetMethod">  
+            <value>sayHello</value>  
+        </property>  
+    </bean>  
+    <bean id="cronTrigger_jobOne" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">  
+        <property name="jobDetail">  
+            <ref bean="jobOneDetail" />  
+        </property>  
+        <!-- 每一秒钟执行一次 -->  
+        <property name="cronExpression">  
+            <value>0/10 * * * * ?</value>  
+        </property>  
+    </bean>  
+      
+    <!-- 任务2配置 -->  
+    <bean name="jobTwo" class="com.zhoufudun.quartz.demo.JobTwoDemo"/>  
+    <bean id="jobDetail_jobTwo" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+        <property name="targetObject">  
+            <ref bean="jobTwo" />  
+        </property>  
+        <property name="targetMethod">  
+            <value>sayHello</value>  
+        </property>  
+    </bean>  
+    <bean id="cronTrigger_jobTwo" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">  
+        <property name="jobDetail">  
+            <ref bean="jobDetail_jobTwo" />  
+        </property>  
+        <property name="cronExpression">  
+       		<!-- 每一秒钟执行一次 -->
+            <value>0/10 * * * * ?</value>  
+        </property>  
+    </bean>  
+      
+    <!-- 总配置 -->  
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">  
+        <!-- 添加触发器 -->  
+        <property name="triggers">  
+            <list>  
+                <ref bean="cronTrigger_jobOne" />  
+                <ref bean="cronTrigger_jobTwo" />  
+            </list>  
+        </property>  
+    </bean>
+    
+    <!-- 导入邮件的配置--> 
+	<import resource="classpath*:spring-mail.xml"/>
+
+	
+	
+</beans>
