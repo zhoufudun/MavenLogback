@@ -31,4 +31,21 @@ Caller+1	 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 2019-09-02 22:33:34.299 [main] [INFO ] [c.zhoufudun.logBack.test.LogBackDemo] [21-line] [LogBackTest-method] - [logback²âÊÔ1
 ]2019-09-02 22:33:34.307 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [22-line] [LogBackTest-method] - [logback²âÊÔ2
 ]2019-09-02 22:33:34.307 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [24-line] [LogBackTest-method] - [logback²âÊÔ4
-]
+]2019-09-05 11:36:29.710 [main] [INFO ] [c.zhoufudun.logBack.test.LogBackDemo] [21-line] [LogBackTest-method] - logback²âÊÔ1
+2019-09-05 11:36:29.714 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [22-line] [LogBackTest-method] - logback²âÊÔ2
+2019-09-05 11:36:29.714 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [24-line] [LogBackTest-method] - logback²âÊÔ4
+2019-09-17 16:57:45.853 [main] [INFO ] [c.zhoufudun.logBack.test.LogBackDemo] [21-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½1
+2019-09-17 16:57:45.853 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [22-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½2
+2019-09-17 16:57:45.853 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [24-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½4
+2019-09-17 16:58:39.363 [main] [INFO ] [c.zhoufudun.logBack.test.LogBackDemo] [21-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½1
+2019-09-17 16:58:39.363 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [22-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½2
+2019-09-17 16:58:39.363 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [24-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½4
+2019-09-17 17:00:02.851 [main] [INFO ] [c.zhoufudun.logBack.test.LogBackDemo] [21-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½1
+2019-09-17 17:00:02.851 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [22-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½2
+2019-09-17 17:00:02.851 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [24-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½4
+2019-09-17 17:00:35.551 [main] [INFO ] [c.zhoufudun.logBack.test.LogBackDemo] [21-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½1
+2019-09-17 17:00:35.554 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [22-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½2
+2019-09-17 17:00:35.554 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [24-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½4
+2019-09-17 17:00:52.760 [main] [INFO ] [c.zhoufudun.logBack.test.LogBackDemo] [21-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½1
+2019-09-17 17:00:52.760 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [22-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½2
+2019-09-17 17:00:52.760 [main] [WARN ] [c.zhoufudun.logBack.test.LogBackDemo] [24-line] [LogBackTest-method] - logbackï¿½ï¿½ï¿½ï¿½4
